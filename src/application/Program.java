@@ -2,14 +2,10 @@ package application;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
-import com.mysql.jdbc.Statement;
 
 import db.DB;
+import db.DbIntegrityException;
 
 public class Program {
 
@@ -40,7 +36,7 @@ public class Program {
 
 		// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 		
-		/*!!!!!!!!!!!CADASTRO
+		/*!!!!!!!!!!!INSERIR
 		 * SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		 * Connection connection = null; PreparedStatement preparedStatement = null;
 		 * 
@@ -87,6 +83,24 @@ public class Program {
 		 */
 		
 		// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+		
+		/* EXCLUSÃO DE DADOS
+		 * Connection connection = null; PreparedStatement preparedStatement = null;
+		 * 
+		 * try { connection = DB.getConnection();
+		 * 
+		 * preparedStatement = connection.prepareStatement( "DELETE FROM department " +
+		 * "WHERE " + "Id = ? "); preparedStatement.setInt(1, 2);
+		 * 
+		 * int rowsAffected = preparedStatement.executeUpdate();
+		 * 
+		 * System.out.println("Done! Rows Affected: " + rowsAffected);
+		 * 
+		 * } catch (SQLException e) { throw new DbIntegrityException(e.getMessage()); }
+		 * finally { DB.closeStatement(preparedStatement); DB.closeConnection(); }
+		 */
+		
+		
 	}
 
 }
